@@ -355,6 +355,37 @@
             color: var(--accent);
         }
 
+        .project-badge {
+            background: linear-gradient(135deg, rgba(99,102,241,0.15), rgba(168,85,247,0.15));
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            white-space: nowrap;
+            align-self: flex-start;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+            align-self: flex-start;
+            transition: all 0.2s;
+        }
+
+        .project-link:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .case-study + .case-study {
+            margin-top: 32px;
+        }
+
         /* Testimonials */
         .testimonials-grid {
             display: grid;
@@ -574,38 +605,51 @@
         <!-- Studi Kasus -->
         <section id="projects" class="container" data-aos="fade-up">
             <h2 class="section-title">📌 Studi kasus: dari masalah ke solusi</h2>
-            <div class="case-study">
-                <h3>✨ Platform Manajemen Event "EventHub+"</h3>
-                <div class="tech-stack">
-                    <span>Next.js</span><span>Node.js</span><span>PostgreSQL</span><span>Redis</span><span>AWS</span>
+
+            <!-- Project 1: eProc Batamindo -->
+            <div class="case-study" style="margin-bottom: 32px;">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px;">
+                    <h3>🏗️ Sistem E-Procurement Batamindo</h3>
+                    <a href="https://eproc.batamindo.co.id/" target="_blank" class="btn-outline project-link"
+                        style="padding: 6px 16px; font-size:0.85rem;">
+                        <i class="fas fa-external-link-alt"></i> Live Demo
+                    </a>
+                </div>
+                <div class="tech-stack" style="margin-bottom:16px;">
+                    <span>Laravel</span><span>Vue.js</span><span>MySQL</span><span>Docker</span><span>Nginx</span>
                 </div>
                 <div class="problem-solution">
                     <div class="problem-box">
                         <h4><i class="fas fa-exclamation-triangle"></i> Tantangan</h4>
-                        <p>Klien kesulitan mengelola ribuan tiket realtime, sistem antrean manual crash saat flash sale.
-                            Refund memakan hari.</p>
+                        <p>Proses pengadaan barang &amp; jasa Batamindo Industrial Estate masih manual, tidak transparan, dan rentan human error dalam proses tender &amp; approval vendor.</p>
                     </div>
                     <div class="solution-box">
-                        <h4><i class="fas fa-lightbulb"></i> Solusi & Dampak</h4>
-                        <p>Optimistic locking + Redis queue, integrasi Midtrans, dashboard realtime. Hasil: 99.9%
-                            uptime, refund < 2 jam, konversi +34%.</p>
+                        <h4><i class="fas fa-lightbulb"></i> Solusi &amp; Dampak</h4>
+                        <p>Platform e-procurement end-to-end: manajemen vendor, e-tender, approval berlapis, dan audit trail. <strong>Hasil:</strong> transparansi 100%, proses pengadaan lebih cepat 60%.</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Project 3: Koperasi BLM -->
             <div class="case-study">
-                <h3>🏭 Sistem Inventory & Supply Chain UMKM MakmurJaya</h3>
-                <div class="tech-stack"><span>Laravel</span><span>React</span><span>MySQL</span><span>Webhooks</span>
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px;">
+                    <h3>🤝 Sistem Informasi Koperasi BLM</h3>
+                    <a href="https://koperasi-blm.com/" target="_blank" class="btn-outline project-link"
+                        style="padding: 6px 16px; font-size:0.85rem;">
+                        <i class="fas fa-external-link-alt"></i> Live Demo
+                    </a>
+                </div>
+                <div class="tech-stack" style="margin-bottom:16px;">
+                    <span>Laravel</span><span>Bootstrap</span><span>MySQL</span><span>REST API</span><span>Midtrans</span>
                 </div>
                 <div class="problem-solution">
                     <div class="problem-box">
-                        <h4><i class="fas fa-exclamation-triangle"></i> Masalah</h4>
-                        <p>Stok tidak sinkron antara gudang dan marketplace (Shopee, Tokopedia). Overselling, input
-                            manual error tinggi.</p>
+                        <h4><i class="fas fa-exclamation-triangle"></i> Tantangan</h4>
+                        <p>Manajemen simpan-pinjam, iuran anggota, dan laporan keuangan koperasi masih berbasis spreadsheet — tidak real-time dan sulit diaudit.</p>
                     </div>
                     <div class="solution-box">
-                        <h4><i class="fas fa-lightbulb"></i> Eksekusi</h4>
-                        <p>Integrasi dua arah via webhook & API marketplace. Dashboard prediksi stok. Turunkan error
-                            stok 85%, hemat 20 jam admin/minggu.</p>
+                        <h4><i class="fas fa-lightbulb"></i> Solusi &amp; Dampak</h4>
+                        <p>Sistem koperasi digital: registrasi anggota online, manajemen simpan-pinjam, laporan keuangan otomatis, dan integrasi pembayaran. <strong>Hasil:</strong> administrasi 3x lebih efisien.</p>
                     </div>
                 </div>
             </div>
